@@ -28,7 +28,7 @@ jobs:
       with:
         fetch-depth: 11 # This value must be set if the lookback configuration option is not disabled for find-code-references. Read more: https://github.com/launchdarkly/ld-find-code-refs#searching-for-unused-flags-extinctions
     - name: LaunchDarkly Code References
-      uses: launchdarkly/find-code-references@v2.13.0
+      uses: launchdarkly/find-code-references@v2.14.0
       with:
         accessToken: ${{ secrets.LD_ACCESS_TOKEN }}
         projKey: LD_PROJECT_KEY
@@ -71,7 +71,7 @@ jobs:
       with:
         fetch-depth: 11 # This value must be set if the lookback configuration option is not disabled for find-code-references. Read more: https://github.com/launchdarkly/ld-find-code-refs#searching-for-unused-flags-extinctions
     - name: LaunchDarkly Code References
-      uses: launchdarkly/find-code-references@v2.13.0
+      uses: launchdarkly/find-code-references@v2.14.0
       with:
         accessToken: ${{ secrets.LD_ACCESS_TOKEN }}
         projKey: LD_PROJECT_KEY
@@ -99,5 +99,4 @@ If the action fails, there may be a problem with your configuration. To investig
 | `repoName` | <p>The repository name. Defaults to the current GitHub repository.</p> | `false` | `""` |
 | `prune` | <p>There is a known issue where the GitHub Action will not prune deleted branch data in private repos. Only enable this if you are running the action in a public repo.</p> | `false` | `false` |
 | `subdirectory` | <p>The subdirectory to run the action in.</p> | `false` | `""` |
-| `defaultBranch` | <p>The default branch. The LaunchDarkly UI will default to this branch. If not provided, will fallback to 'main'.</p> | `false` | `""` |
 <!-- action-docs-inputs source="action.yml" -->
